@@ -60,11 +60,11 @@ console.log(b); // Output: 30
 
 
 
-// name()
+name()
 
-// function  name(){
+function  name(){
 
-// }
+}
 
 // **2.1 Function Declaration**
 // - Can be used before they are defined (hoisted).
@@ -79,14 +79,16 @@ console.log(greet("John")); // Output: Hello, John!
 // - Does not have its own `this` context.
 
 
-// function some(){
-//xyz
-// }
+function some(){
+console.log("Some Function  called")
+}
+let some= function (){
+  console.log("Some Function  called")
+}
 
-
-//some()
-//  const some= ()=> {
-  // }
+ let some= ()=> {
+  console.log("Some Function  called")
+  }
 
 const greetArrow = (name) => `Hello, ${name}!`;
 console.log(greetArrow("Jane")); // Output: Hello, Jane!

@@ -72,32 +72,35 @@ function sumNmul(num1,num2){
     console.log(sum)
     let mul=num1*num2;
     console.log(mul)
+    return 1;
 }
 
-sumNmul(1,2)
+let returned_value=sumNmul(1,2)
 sumNmul(2,3)
+
+
 // 1,2,3,4,5
 
 
-// let sum=1+2;
-// console.log(sum)
-// let mul=1*2;
-// console.log(mul)
+let sum=1+2;
+console.log(sum)
+let mul=1*2;
+console.log(mul)
 
-//  sum=2+3;
-// console.log(sum)
-//  mul=2*3;
-// console.log(mul)
+ sum=2+3;
+console.log(sum)
+ mul=2*3;
+console.log(mul)
 
-//  sum=3+4;
-// console.log(sum)
-//  mul=3*4;
-// console.log(mul)
+ sum=3+4;
+console.log(sum)
+ mul=3*4;
+console.log(mul)
 
-//  sum=4+5;
-// console.log(sum)
-//  mul=4*5;
-// console.log(mul)
+ sum=4+5;
+console.log(sum)
+ mul=4*5;
+console.log(mul)
 
 
 let a=5;

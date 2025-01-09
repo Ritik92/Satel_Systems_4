@@ -29,9 +29,68 @@ const slicedArray = mergedArray.slice(1, 4); // Start index (inclusive), End ind
 console.log(slicedArray); // Output: [2, 3, 4]
 
 // 7. splice() - Adds, removes, or replaces elements in an array.
-const arr3 = [1, 2, 3, 4, 5];
-arr3.splice(2, 1, 99); // Removes 1 element at index 2 and adds 99
-console.log(arr3); // Output: [1, 2, 99, 4, 5]
+
+// Example 1: Removing elements
+const fruits = ['apple', 'banana', 'cherry', 'date'];
+// Remove 2 elements starting at index 1 ('banana' and 'cherry')
+const removedFruits = fruits.splice(1, 2);
+console.log(fruits); // ['apple', 'date']
+console.log(removedFruits); // ['banana', 'cherry']
+
+// Explanation:
+// - splice(1, 2) starts at index 1 and removes 2 elements.
+// - The method returns the removed elements as an array.
+
+// Example 2: Adding elements
+const vegetables = ['carrot', 'spinach'];
+// Add 'broccoli' at index 1 without removing any elements
+vegetables.splice(1, 0, 'broccoli');
+console.log(vegetables); // ['carrot', 'broccoli', 'spinach']
+
+// Explanation:
+// - splice(1, 0, 'broccoli') starts at index 1, removes 0 elements, and inserts 'broccoli'.
+
+// Example 3: Replacing elements
+const animals = ['dog', 'cat', 'rabbit'];
+// Replace 'cat' (index 1) with 'parrot'
+animals.splice(1, 1, 'parrot');
+console.log(animals); // ['dog', 'parrot', 'rabbit']
+
+// Explanation:
+// - splice(1, 1, 'parrot') removes 1 element at index 1 ('cat') and adds 'parrot' at the same position.
+
+// Example 4: Using negative index
+const numbers = [1, 2, 3, 4, 5];
+// Start removing from the second-to-last position, remove 1 element
+const removedNumbers = numbers.splice(-2, 1);
+console.log(numbers); // [1, 2, 3, 5]
+console.log(removedNumbers); // [4]
+
+// Explanation:
+// - A negative index starts counting from the end of the array.
+// - splice(-2, 1) removes 1 element starting from the second-to-last position.
+
+// Example 5: Removing all elements from an index
+const colors = ['red', 'green', 'blue', 'yellow'];
+// Remove all elements starting from index 2
+const removedColors = colors.splice(2);
+console.log(colors); // ['red', 'green']
+console.log(removedColors); // ['blue', 'yellow']
+
+// Explanation:
+// - splice(2) removes all elements from index 2 to the end of the array.
+
+// Key Points:
+// 1. splice() modifies the original array directly.
+// 2. It can add, remove, or replace elements.
+// 3. Returns an array containing the removed elements (if any).
+// 4. Use negative indexes to start from the end of the array.
+
+// Common Use Cases:
+// - Removing specific elements.
+// - Inserting new elements at a specific position.
+// - Replacing existing elements.
+
 
 // 8. indexOf() - Finds the first index of a specified element (-1 if not found).
 console.log(arr3.indexOf(99)); // Output: 2
@@ -41,7 +100,11 @@ console.log(arr3.indexOf(10)); // Output: -1
 console.log(arr3.includes(4)); // Output: true
 console.log(arr3.includes(10)); // Output: false
 
+
 // 10. forEach() - Executes a provided function once for each array element.
+arr3=[1,2,99,4,5]
+
+
 arr3.forEach((item, index) => {
   console.log(`Item: ${item}, Index: ${index}`);
 });
@@ -54,16 +117,15 @@ arr3.forEach((item, index) => {
 
 // Output: [1, 2, 99, 4, 5]
 // 11. map() - Creates a new array by applying a function to each element.
-const squaredArray = arr3.map(num => num * num);
+const squaredArray = arr3.map(num => num * num); 
 console.log(squaredArray); // Output: [1, 4, 9801, 16, 25]
 
 // 12. filter() - Creates a new array with elements that pass a test.
+// Output: [1, 2, 99, 4, 5]
 const filteredArray = arr3.filter(num => num > 2);
 console.log(filteredArray); // Output: [99, 4, 5]
 
-// 13. reduce() - Reduces an array to a single value by applying a function.
-const sum = arr3.reduce((total, num) => total + num, 0); // 0 is the initial value
-console.log(sum); // Output: 111
+// 13. reduce() - To be studied later
 
 // 14. find() - Returns the first element that satisfies a test.
 const foundItem = arr3.find(num => num > 3);

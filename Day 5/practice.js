@@ -1,4 +1,2 @@
-let arr=[1,2,3,5,6]
-for(let i=0;i<5;i++){
-console.log(arr[i])
-}
+const greetArrow = (name) => `Hello, ${name}!`;
+console.log(greetArrow("Jane")); // Output: Hello, Jane!
